@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class AuthComponent implements OnInit {
 
   step = 0;
+  totalSteps = 3;
 
   constructor() { }
 
@@ -15,8 +16,8 @@ export class AuthComponent implements OnInit {
   prev(){
     this.step > 0 ? this.step-- : this.step = 0;
   }
-  next(){
-    this.step++
+  next(totalSteps){
+    this.step != totalSteps ? this.step++ : null
   }
 
 
