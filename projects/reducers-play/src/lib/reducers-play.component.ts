@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-reducers-play',
-  template: `
-    <p>
-      reducers-play works!
-    </p>
-  `,
+  templateUrl: './main.html',
   styles: [
   ]
 })
