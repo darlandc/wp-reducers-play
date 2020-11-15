@@ -1,3 +1,4 @@
+import { StepsComponent } from './components/steps/steps.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AuthComponent } from './auth.component';
@@ -9,12 +10,12 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [AuthComponent, SecUpdateComponent, LoginFormComponent],
+  declarations: [AuthComponent, SecUpdateComponent, LoginFormComponent, StepsComponent],
   imports: [
     CommonModule,
     AuthRoutingModule
   ],
-  exports: [AuthComponent, SecUpdateComponent, LoginFormComponent]
+  exports: [AuthComponent, SecUpdateComponent, LoginFormComponent, StepsComponent]
 })
 export class AuthModule { }
 
