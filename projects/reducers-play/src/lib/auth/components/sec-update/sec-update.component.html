@@ -1,0 +1,18 @@
+<p>sec-update component is on!</p>
+<p>step {{ step }} </p>
+<p>
+  <button (click)="prev()">prev</button>
+  <button (click)="next(totalSteps)">next</button>
+</p>
+
+<span [ngSwitch]="step">
+<p *ngSwitchCase="1">
+  template approach with switch case on step 1
+</p>
+<p *ngSwitchCase="2">
+  template approach with switch case on step 2
+</p>
+<p *ngSwitchDefault>
+  template approach with switch case default
+</p>
+</span>

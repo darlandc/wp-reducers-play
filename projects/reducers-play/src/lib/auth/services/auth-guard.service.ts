@@ -8,7 +8,7 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+// @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
   obs = new Observable();
 
@@ -26,10 +26,18 @@ export class AuthGuard implements CanActivate {
       if (authenticated) {
         return true;
       } else {
-        this.router.navigate(['/']);
+        //this.router.navigate(['/']);
       }
     });
 
     return true;
+  }
+
+
+  canActivateChild(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<boolean> | Promise<boolean> | boolean {
+    return this.canActivate(route, state);
   }
 }

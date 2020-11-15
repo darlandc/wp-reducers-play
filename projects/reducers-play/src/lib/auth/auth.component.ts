@@ -13,11 +13,13 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  prev(){
-    this.step > 0 ? this.step-- : this.step = 0;
+  prev(): number {
+    return this.step > 0 ? this.step-- : this.step = 0;
   }
-  next(totalSteps){
-    this.step != totalSteps ? this.step++ : null
+  next(totalSteps): number {
+    if (this.step !== totalSteps) {
+      return this.step++;
+    }
   }
 
 

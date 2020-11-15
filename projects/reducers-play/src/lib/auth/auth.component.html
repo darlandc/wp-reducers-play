@@ -1,0 +1,29 @@
+<h1>auth component</h1>
+<p>step: {{ step }}</p>
+
+<p>
+  <button (click)="prev()">prev</button>
+  <button (click)="next(totalSteps)">next</button>
+</p>
+
+<ng-template [ngIf]="step">
+  <div class="form-step-1" *ngIf="step === 1">
+    <login-form></login-form>
+  </div>
+  <div class="form-step-2" *ngIf="step === 2">
+    <sec-update></sec-update>
+  </div>
+  <div class="form-step-3" *ngIf="step === 3">form step 3</div>
+</ng-template>
+<!--
+ <span [ngSwitch]="">
+ <p *ngSwitchCase="true">
+
+ </p>
+ <p *ngSwitchCase="false">
+
+ </p>
+ <p *ngSwitchDefault>
+
+ </p>
+ </span> -->
