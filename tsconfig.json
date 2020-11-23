@@ -16,6 +16,10 @@
       "dom"
     ],
     "paths": {
+      "menu-products": [
+        "dist/menu-products/menu-products",
+        "dist/menu-products",
+      ],
       "reducers-play": [
         "dist/reducers-play/reducers-play",
         "dist/reducers-play"
